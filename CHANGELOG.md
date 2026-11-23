@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-23
+
+### Added
+
+- A `web_search` tool backed by a Brave Search API key in
+  `~/.config/web-search/key.json`, offered only to models without
+  provider-native search, never beside it.
+- A refusal mark in `~/.config/web-search/state.json` when Brave refuses the
+  key, naming the key by its SHA-256 and cleared by a later successful search.
+- `native-search.json`: the providers that search by themselves, for hosts
+  that tell a person which models need a key.
+
 ## [0.1.0] - 2026-11-23
 
 ### Added

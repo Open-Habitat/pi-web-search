@@ -1,0 +1,13 @@
+{
+  "name": "@open-habitat/pi-web-search",
+  "version": "0.1.0",
+  "description": "Provider-native web search and citations for Pi",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/Open-Habitat/pi-web-search.git" },
+  "keywords": ["pi-package", "web-search"],
+  "files": ["extension.mjs", "LICENSE", "README.md", "CHANGELOG.md"],
+  "pi": { "extensions": ["./extension.mjs"] },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "devDependencies": { "@earendil-works/pi-coding-agent": "1.5.2" }
+}

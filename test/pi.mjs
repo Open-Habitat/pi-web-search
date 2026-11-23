@@ -38,7 +38,8 @@ export async function converse(provider, model, prompts, reply, extra = [], opti
     await options.setup?.(home);
     // An opt-in run checks the published git package's installation and native
     // manifest discovery, rather than passing its extension path explicitly.
-    const packageSource = process.env.PI_WEB_SEARCH_TEST_PACKAGE;
+    // A test with its own fixture keeps it, so it never reaches a real service.
+    const packageSource = options.resource ? undefined : process.env.PI_WEB_SEARCH_TEST_PACKAGE;
     if (packageSource) {
       const installed = spawnSync(process.execPath, [cli, 'install', packageSource], {
         cwd: home, encoding: 'utf8', timeout: 60000,
